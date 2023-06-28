@@ -1,0 +1,87 @@
+/*===========================
+     20.ERROR PAGE CSS 
+===========================*/
+.notfound-error {
+    min-height: 850px;
+    background-color: #18191D;
+
+    @media #{$xs} {
+        .or2 {
+            order: 2;
+        }
+
+        .or1 {
+            order: 1;
+        }
+    }
+
+    @media #{$xs} {
+        min-height: 550px;
+    }
+}
+
+.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 850px;
+
+    @media #{$xs} {
+        min-height: 550px;
+    }
+
+    .error-content {
+        @media #{$xs} {
+            padding-top: 50px;
+        }
+
+        h2 {
+            -webkit-text-stroke: 2px #D90A2C;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 56px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+
+            @media #{$md} {
+                font-size: 38px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 28px;
+            color: #FFFFFF;
+            margin-bottom: 45px;
+        }
+
+    }
+
+    .error-img {
+
+        @media #{$xs} {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+}

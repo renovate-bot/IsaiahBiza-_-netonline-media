@@ -1,0 +1,229 @@
+/*===========================
+     15.SERVICE DETAILS PAGE CSS 
+===========================*/
+.service-details {
+    @media #{$xs} {
+        margin: 80px 0 50px 0;
+    }
+
+    @media #{$xs} {
+        .or2 {
+            order: 2;
+        }
+
+        .or1 {
+            order: 1;
+        }
+    }
+}
+
+.signle-service-details {
+    margin-bottom: 120px;
+
+    @media #{$xs} {
+        margin-bottom: 50px;
+
+        .or2 {
+            order: 2;
+        }
+
+        .or1 {
+            order: 1;
+        }
+    }
+
+    img {
+        margin-right: -20px;
+        position: relative;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #17161A;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        color: #272727;
+        margin: 0;
+    }
+}
+
+.sidebar-widget {
+    background: #F6F6F6;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 40px;
+
+    h4 {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 35px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #2E2D31;
+        margin-bottom: 30px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            background: #111111;
+            opacity: 0.5;
+            border: 1px solid #111111;
+            width: 70px;
+            bottom: -5px;
+            left: 0;
+        }
+    }
+}
+
+.service-list {
+    list-style: none;
+
+    li {
+        display: block;
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            color: #272727;
+            display: block;
+            position: relative;
+            padding-bottom: 20px;
+            @include transition(.5s);
+
+            i {
+                margin-right: 10px;
+            }
+
+            span {
+                position: absolute;
+                right: 0;
+            }
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+
+        &:last-child a {
+            padding: 0;
+        }
+
+    }
+}
+
+.sidebar-search {
+    margin-bottom: 40px;
+
+    form {
+        position: relative;
+        overflow: hidden;
+
+        input {
+            height: 50px;
+            background: #212121;
+            border-radius: 3px;
+            width: 100%;
+            border: none;
+            padding: 0 70px 0 10px;
+            color: #fff;
+        }
+
+        button {
+            position: absolute;
+            width: 70px;
+            height: 50px;
+            background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%);
+            border-radius: 0px 3px 3px 0px;
+            border: none;
+            color: #fff;
+            right: 0;
+            overflow: hidden;
+            @include transition(.5s);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.single-service-work-process {
+    h3 {
+        font-weight: bold;
+        font-size: 30px;
+        
+        text-transform: uppercase;
+        color: #17161A;
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 26px;
+       
+        color: #17161A;
+        margin-bottom: 10px;
+    }
+
+    .single-step {
+        margin-bottom: 40px;
+
+        .step {
+            background: #FFFFFF;
+            border: 1px solid rgba(217, 10, 44, 0.2);
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 30px 30px;
+            position: relative;
+
+            @media #{$xs} {
+                padding: 30px 10px;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 28px;
+
+                color: #272727;
+                margin: 0;
+            }
+
+            .step-count {
+                position: absolute;
+                right: 28px;
+                top: 24px;
+                span {
+                    font-weight: 700;
+                    font-size: 45px;
+                    text-align: center;
+                    letter-spacing: 0.02em;
+                    text-transform: capitalize;
+                    opacity: 0.3;
+                    -webkit-text-stroke: 1px #17161A;
+                    -webkit-text-fill-color: transparent;
+                    line-height: 1;
+                }
+            }
+        }
+
+        .step-img {
+            @media #{$xs} {
+                margin-bottom: 30px;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}

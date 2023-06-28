@@ -1,0 +1,76 @@
+/*===========================
+     12.HOMW TWO CSS 
+===========================*/
+.dark {
+    background-color: #18191D;
+}
+
+//About section home two css
+.about-left {
+
+    &.dark {
+        p {
+            color: #B3B3B3;
+        }
+
+        .our-mission {
+            .msn-content {
+                h5 {
+                    color: #FFFFFF;
+                }
+
+                p {
+                    color: #B3B3B3;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+//Why choose us section home two css
+.valuable-skills {
+    &.dark {
+        .signle-bar {
+            h6 {
+                color: #ffffff;
+            }
+
+            .barfiller .tip {
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+
+//Latest news section home two css
+.signle-news {
+    &.dark {
+        background: #111111;
+        box-shadow: 0px 0px 50px rgba(53, 51, 83, 0.06);
+
+        .author-info {
+            h5 {
+                color: #fff;
+            }
+        }
+
+        .news-content {
+            h3 {
+                a {
+                    color: #fff;
+                }
+            }
+
+            p {
+                color: #b3b3b3;
+            }
+        }
+
+        .view-btn a {
+            color: $theme-color;
+        }
+    }
+}

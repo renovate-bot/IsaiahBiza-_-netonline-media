@@ -1,0 +1,100 @@
+/*===========================
+     01.WHY CHOOSE CSS 
+===========================*/
+.why-choose-us {
+    @media #{$xs} {
+        margin: 80px 0;
+    }
+
+    .title.black {
+        @media #{$xs} {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+.video-demo {
+    position: relative;
+    z-index: 1;
+
+    img {
+        width: 100%;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../../../public/images/play-button-bg.png);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .popup-video {
+            display: inline-block;
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            height: 128px;
+            width: 128px;
+            line-height: 128px;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;    
+            color: #fff;
+            @include transition(.5s);
+
+            i {
+                margin-right: 5px;
+            }
+
+            &:hover {
+                color: #fff;
+                border: 1px solid $theme-color;
+                background-color: $theme-color;
+            }
+
+        }
+    }
+}
+
+.valuable-skills {
+    img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .signle-bar {
+        padding-top: 30px;
+        h6 {
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: #111111;
+            margin-bottom: 10px;
+        }
+
+        
+
+    }
+
+}

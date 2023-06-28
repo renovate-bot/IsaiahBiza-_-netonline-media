@@ -1,0 +1,205 @@
+/*===========================
+     10.BLOG CSS 
+===========================*/
+.latest-news {
+
+    @media #{$xs} {
+        margin: 80px 0;
+    }
+
+    .title.black {
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.signle-news {
+    border-radius: 2px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(53, 51, 83, 0.06);
+    position: relative;
+    overflow: hidden;
+
+    .tag {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 1;
+
+        a {
+            display: inline-block;
+            min-width: 140px;
+            background: #232226;
+            border-radius: 2px;
+            padding: 5px 20px;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFFFFF;
+        }
+    }
+
+    .post-img {
+        overflow: hidden;
+        /* Hide the element content, while height = 0 */
+        height: 0;
+        opacity: 0;
+        transition: height 0ms 400ms, opacity 400ms 0ms;
+
+        a {
+            img {
+                width: 100%;
+                height: 222px;
+                @include transition(1s);
+
+                @media #{$laptop} {
+
+                }
+            }
+        }
+    }
+}
+
+.signle-news:hover .tag {
+    a {
+        background-color: $theme-color;
+    }
+}
+.signle-news:hover{
+    .view-btn{
+        
+    }
+}
+.signle-news{
+    .news-content{
+        .author{
+            margin-top: 65px;
+        }
+    }
+}
+.signle-news:hover .post-img {
+    height: auto;
+    opacity: 1;
+    transition: height 0ms 1000ms, opacity 1000ms 0ms;
+}
+
+.signle-news:hover .author,
+.signle-news:hover p {
+    display: none;
+}
+
+.signle-news:hover .news-content h3 {
+    margin: 0;
+}
+
+.news-content {
+    padding: 20px;
+
+    h3 {
+        margin:20px 0 5px 0;
+        font-weight: 600;
+        font-size: 25px;
+
+        a {
+            font-size: 25px;
+            text-transform: capitalize;
+            color: #2E2D31;
+            display: inline-block;
+            line-height: 40px;
+
+            @media #{$laptop} {
+                font-size: 24px;
+            }
+        }
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        color: #272727;
+        margin: 0;
+    }
+
+}
+
+.author {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 70px;
+
+    @media #{$xs} {
+        margin-bottom: 30px !important;
+    }
+}
+
+.author-pic {
+    min-width: 70px;
+
+    img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+    }
+}
+
+.author-info {
+    h5 {
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #232226;
+        margin-bottom: 5px;
+
+        @media #{$lg} {
+            font-size: 18px;
+        }
+
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #6A696C;
+    }
+}
+
+.view-btn {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 9px;
+
+    a {
+        font-weight: 600;
+        font-size: 16px;
+        color: #232226;
+        display: inline-block;
+        text-transform: capitalize;
+        position: relative;
+        z-index: 1;
+        @include transition(.5s);
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 40px;
+            width: 40px;
+            background: #D90A2C;
+            opacity: 0.35;
+            border-radius: 50%;
+            left: -10px;
+            top: 50%;
+            z-index: -1;
+            @include transform (translateY(-50%));
+        }
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+}

@@ -1,0 +1,163 @@
+/*===========================
+     02.HEADER CSS 
+===========================*/
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 15px 100px;
+    @include transition(.8s);
+
+    @media #{$laptop} {
+        padding: 0 50px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        padding: 30px 10px;
+    }
+
+}
+
+.logo {
+    a {
+        img {
+            max-width: 170px;
+        }
+
+    }
+}
+
+.get-quate.dn {
+    display: none;
+    margin-top: 50px;
+    text-align: left;
+
+    @media #{$xs} {
+        display: block;
+    }
+
+    @media #{$sm} {
+        display: none;
+    }
+}
+
+.main-nav {
+    display: inline-block;
+
+    .mobile-menu-logo {
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 0 20px;
+            transition: all linear .3s;
+
+            a {
+                font-size: 16px;
+                color: #fff;
+                display: block;
+                text-transform: capitalize;
+                padding: 30px 0;
+                position: relative;
+                @include transition(.5s);
+
+                &.active {
+                    color: $theme-color;
+                }
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+
+            i {
+                width: 30px;
+                font-size: 14px;
+                text-align: center;
+                color: #ffffff;
+                font-style: normal;
+                position: absolute;
+                right: -8px;
+                top: 33px;
+                z-index: 999;
+                cursor: pointer;
+            }
+
+            ul.sub-menu {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: auto;
+                margin: 0;
+                padding: 10px 0;
+                opacity: 0;
+                visibility: hidden;
+                min-width: 200px;
+                background: #222;
+                text-align: left;
+                border-radius: 5px;
+                @include transition(.5s);
+                @include transform(translateY(-10px));
+
+                > li {
+                    padding: 0;
+                    display: block;
+
+                    a {
+                        display: block;
+                        padding: 10px 15px;
+                        color: #fff;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        line-height: 1;
+                        @include transition(.4s);
+
+                        &.active {
+                            color: $theme-color;
+                        }
+
+                        &:hover {
+                            color: $theme-color;
+                            margin-left: 10px;
+
+                        }
+                    }
+                }
+            }
+
+            &:hover ul.sub-menu {
+                visibility: visible;
+                opacity: 1;
+                @include transform(translateY(0));
+            }
+        }
+    }
+}
+
+.get-quate {
+    text-align: right;
+
+    @media #{$xs} {
+        display: none;
+    }
+
+    @media #{$sm} {
+        text-align: center;
+        display: block;
+    }
+}
+@media only screen and (min-width: 1199px) {
+    .main-nav ul li:hover ul.sub-menu {
+        display: block !important;
+        transition: all linear .3s;
+    }
+}

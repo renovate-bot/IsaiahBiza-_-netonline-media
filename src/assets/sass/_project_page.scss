@@ -1,0 +1,100 @@
+/*===========================
+     16.PROJECT PAGE CSS 
+===========================*/
+.project-area {
+    
+    @media #{$xs} {
+        margin: 80px 0;
+    }
+}
+
+.project-tab {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.project-filter-tab {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 0 12.5px;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #E4E4E4;
+        background-color: #111111;
+        box-shadow: inset 0px 0px 10px rgba(6, 6, 6, 0.15);
+        border-radius: 10px;
+        padding: 15px 30px;
+        cursor: pointer;
+        @inlude transition(.5s);
+
+        @media #{$md} {
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+
+        @media #{$xs} {
+            margin: 10px;
+            font-size: 12px;
+            padding: 10px 15px;
+        }
+
+        &.active {
+            background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%);
+        }
+
+        &:hover {
+            background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%);
+        }
+    }
+}
+
+
+//Project page two css
+.single-portfolio.masonary {
+    margin: 0;
+
+    .portfolio-data {
+        border-radius: 0;
+
+        &:before {
+            border-radius: 0;
+            background-image: url(../../../public/images/portfolio2hover.png);
+        }
+
+        a {
+            img {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .portfolio-inner {
+        visibility: hidden;
+        opacity: 0;
+
+        .portfolio-hover{
+            a{
+                div.isotop{
+                    :after{
+                        position: absolute;
+                        content: '12121';
+                        width: 10px;
+                        height: 10px;
+                        background: red;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover .portfolio-inner {
+        visibility: visible;
+        opacity: 1;
+    }
+}

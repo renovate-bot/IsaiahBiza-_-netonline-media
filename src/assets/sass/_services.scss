@@ -1,0 +1,245 @@
+/*===========================
+     04.SERVICE CSS 
+===========================*/
+.service-area {
+    background-color: #111215;
+
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .title {
+        h2 {
+            margin-bottom: 45px;
+        }
+
+        @media #{$md,$xs} {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.single-service {
+    border: 1px solid #232323;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px 20px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    @include transition(.5s);
+
+    @media #{$laptop} {
+        padding: 20px 20px;
+    }
+
+    @media #{$lg} {
+        padding: 20px;
+    }
+
+    @media #{$xs} {
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+
+    @media #{$sm} {
+        padding: 10px;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        height: 90px;
+        width: 90px;
+        background: radial-gradient(105.91% 105.91% at 37.1% 19.35%, rgba(217, 10, 44, 0.3) 0%, rgba(217, 10, 44, 0) 83.11%);
+        border-radius: 50%;
+        opacity: 0.3;
+        display: none;
+        @include transition(.5s);
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 10px;
+        @include transition(.5s);
+    }
+
+    span {
+        font-size: 35px;
+        font-weight: 700;
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.07);
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 2px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        line-height: 1;
+        @include transition(.5s);
+    }
+
+    &:hover:after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover:before {
+        display: block;
+    }
+
+    &:hover .service-content a i {
+        margin-left: 5px;
+
+    }
+
+    &:hover span {
+        -webkit-text-stroke: 2px $theme-color;
+        -webkit-text-fill-color: transparent;
+
+    }
+}
+
+.service-icon {
+    margin-top: 15px;
+    min-width: 70px;
+
+    @media #{$lg} {
+        min-width: 60px;
+    }
+
+    @media #{$xs} {
+        margin-bottom: 40px;
+    }
+
+    @media #{$sm} {
+        margin-bottom: 30px;
+    }
+
+    i {
+        background-color: #D90A2C;
+        height: 65px;
+        width: 65px;
+        display: inline-block;
+        line-height: 65px;
+        text-align: center;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg} {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border: 1px solid rgba(217, 10, 44, 0.15);
+            border-radius: 50%;
+            left: -5px;
+            top: -10px;
+            z-index: -1;
+
+            @media #{$lg} {
+                top: -5px;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border: 1px solid rgba(217, 10, 44, 0.15);
+            border-radius: 50%;
+            right: -5px;
+            top: -10px;
+            z-index: -1;
+
+            @media #{$lg} {
+                top: -5px;
+            }
+        }
+
+        img {
+            max-height: 38px;
+            max-width: 38px;
+
+            @media #{$lg} {
+                max-height: 28px;
+                max-width: 28px;
+            }
+        }
+
+    }
+}
+
+.service-content {
+    margin-left: 15px;
+
+    @media #{$lg} {
+        margin-left: 10px;
+    }
+
+    @media #{$xs} {
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 22px;
+        font-weight: 500;
+        color: #fff;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        @media #{$lg} {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    p {
+        color: #E4E4E4;
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        @media #{$lg} {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        @media #{$sm} {
+            font-size: 14px;
+        }
+    }
+
+    a {
+        display: inline-block;
+        color: #D90A2C;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+        z-index: 1;
+        position: relative;
+
+        i {
+            margin-left: -4px;
+            z-index: -1;
+            position: relative;
+            @include transition(.5s);
+        }
+    }
+}

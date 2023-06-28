@@ -1,0 +1,317 @@
+/*===========================
+     14.SERVICE PAGE CSS 
+===========================*/
+.how-we-work {
+
+    @media #{$xs} {
+        margin-top: 80px;
+    }
+
+    .title.black {
+        margin-bottom: -80px;
+
+        @media #{$lg} {
+            margin-bottom: -50px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin: 0;
+        }
+    }
+}
+
+.swiper.work-process {
+    padding-top: 150px;
+
+    @media #{$xs} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media #{$lg} {
+        padding-top: 110px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 40px !important;
+        width: 40px !important;
+        background: #2A2A2A;
+        border-radius: 50%;
+        color: #fff !important;
+        top: 22px;
+        right: 0% !important;
+        @include transition(.5s);
+
+        @media #{$xs} {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $theme-color;
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 14px !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: auto;
+        right: 5% !important;
+
+        @media #{$md} {
+            right: 12% !important;
+        }
+
+        @media #{$xs} {
+            right: 22% !important;
+            ;
+        }
+    }
+}
+
+.work-process-wrapper {
+
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .work-process-inner {
+        position: absolute;
+        min-width: 350px;
+        left: 0;
+        top: 0;
+        background: #17161A;
+        text-align: center;
+        padding: 40px 60px;
+
+        @media #{$xs} {
+            padding: 30px 60px;
+        }
+
+        b {
+            font-weight: bold;
+            font-size: 65px;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            opacity: 0.1;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 1;
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+    }
+}
+
+.pricing-plan {
+
+    @media #{$md,$xs} {
+        .or2 {
+            order: 2;
+        }
+
+        .or1 {
+            order: 1;
+        }
+    }
+
+    @media #{$xs} {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+
+#pills-tab {
+    margin: 0 !important;
+
+    @media #{$xs} {
+        justify-content: center;
+    }
+}
+
+#pills-tabContent {
+    margin-top: 40px;
+}
+
+.nav-pills .nav-link {
+    background: #191A1C;
+    box-shadow: inset 0px 0px 10px rgba(6, 6, 6, 0.15);
+    border-radius: 50px;
+    min-width: 170px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-right: 30px;
+    @include transition(.5s);
+
+    @media #{$xs} {
+        min-width: 140px;
+        font-size: 14px;
+        margin-right: 0;
+        margin: 0 5px;
+    }
+
+    @media #{$md} {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%) !important;
+        box-shadow: inset 0px 0px 10px rgba(6, 6, 6, 0.15);
+        border-radius: 50px;
+    }
+}
+
+.nav-pills .nav-link.active {
+    background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%) !important;
+    box-shadow: inset 0px 0px 10px rgba(6, 6, 6, 0.15);
+    border-radius: 50px;
+}
+
+.single-price-box {
+    position: relative;
+    background: #111111;
+    box-shadow: inset 0px 0px 10px rgba(6, 6, 6, 0.15);
+    border-radius: 10px;
+    padding: 40px 55px;
+    text-align: center;
+    z-index: 1;
+
+    @media #{$md,$xs} {
+        padding: 40px 30px;
+        margin-bottom: 30px;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 10px;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.5s);
+    }
+
+    &:hover:before {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover .pay-btn a {
+        background: transparent;
+        background-color: #0A0A0A;
+    }
+
+    h3 {
+        position: relative;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+
+        @media #{$lg} {
+            font-size: 24px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%);
+            width: 150px;
+            height: 2px;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+        }
+    }
+
+    span {
+        font-weight: normal;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 38px;
+        text-align: center;
+        color: #E4E4E4;
+        margin-top: 40px;
+        margin-bottom: 0;
+
+        @media #{$lg} {
+            font-size: 24px;
+        }
+
+        sub {
+            font-size: 16px;
+            font-weight: 400;
+            color: #D90A2C;
+            text-transform: capitalize;
+        }
+    }
+
+    .feature-list {
+        text-align: left;
+        margin-top: 35px;
+        margin-bottom: 40px;
+
+        li {
+            font-size: 16px;
+            color: #FFFFFF;
+            padding: 10px 0;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .pay-btn {
+        a {
+            font-weight: 700;
+            font-size: 17px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: #FFFFFF;
+            display: inline-block;
+            background: linear-gradient(90deg, #D90A2C 1.05%, #730000 100%);
+            border-radius: 30px;
+            min-width: 200px;
+            padding: 15px 30px;
+            @include transition(.5s);
+        }
+    }
+}

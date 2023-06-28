@@ -1,0 +1,206 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Finibus - Software and Digital Agency HTML Template
+    Author: Egenslab
+    Author URI: https://themeforest.net/user/egenslab/portfolio
+    Support: https://www.egenslab.com/support/
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01.COMMON
+    02.HEADER
+    03.HERO
+    04.SERVICE
+    05.ABOUT
+    06.PARTNER
+    07.PORTFOLIO
+    08.WHY CHOOSE
+    09.TESTIMONIAL
+    10.BLOG
+    11.LETSTALK
+    12.HOME TWO
+    13.ABOUT PAGE
+    14.SERVICE PAGE
+    15.SERVICE DETAILS PAGE
+    16.PROJECT PAGE
+    17.PROJECT DETAILS PAGE
+    18.CONTACT PAGE
+    19.BLOG PAGE
+    20.ERROR PAGE
+    21.COMMING SOON
+    22.FOOTER
+
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
+@import 'common';
+@import 'header';
+@import 'hero';
+@import 'services';
+@import 'about';
+@import 'partner';
+@import 'portfolio';
+@import 'why_choose';
+@import 'testimonial';
+@import 'blog';
+@import 'letstalk';
+@import 'footer';
+@import 'home2';
+@import 'about_page';
+@import 'service_page';
+@import 'service_details';
+@import 'project_page';
+@import 'project_details';
+@import 'contact_page';
+@import 'blog_page';
+@import 'error_page';
+@import 'commingsoon';
+
+
+@media#{$responsive-mobile-menu} {
+
+    //Main menu redesign
+    header .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 260px;
+        padding: 10px 15px !important;
+        z-index: 99999;
+        height: 100%;
+        overflow: auto;
+        background: #242424;
+        -webkit-transform: translateX(-260px);
+        transform: translateX(-260px);
+        -webkit-transition: -webkit-transform .3s ease-in;
+        transition: -webkit-transform .3s ease-in;
+        transition: transform .3s ease-in;
+        transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+
+        .mobile-menu-logo {
+            text-align: left;
+            padding-top: 20px;
+            display: block;
+            border-bottom: 1px solid $theme-color;
+            padding-bottom: 8px;
+        }
+
+    }
+
+    header .main-nav ul {
+        float: none;
+        text-align: left;
+        padding: 25px 10px 25px 0;
+    }
+
+    header .main-nav ul li {
+        display: block;
+        position: relative;
+        padding: 0 5px;
+    }
+
+    header .main-nav ul li a {
+        padding: 10px 0;
+        display: block;
+        font-weight: 300;
+    }
+
+    header .main-nav ul li ul.sub-menu {
+        position: static;
+        min-width: 200px;
+        background: 0 0;
+        border: none;
+        opacity: 1;
+        visibility: visible;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: none;
+        transform: none;
+        -webkit-transition: none;
+        transition: none;
+        display: none;
+        margin-top: 0 !important;
+        transform: translateY(0px);
+    }
+
+    header .main-nav.slidenav {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    header .main-nav ul li .bi {
+        display: block;
+        top: 8px;
+        font-size: 16px;
+    }
+
+    //Mobile menu button design
+    .mobile-menu {
+        position: relative;
+        top: 2px;
+        padding: 0 5px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .cross-btn {
+        display: inline-block !important;
+        position: relative;
+        width: 30px !important;
+        height: 22px !important;
+        cursor: pointer;
+        border: 3px solid transparent !important;
+
+        span {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(233.77deg, rgba(115, 0, 0, 0.8) 0.94%, rgba(217, 10, 44, 0.8) 99.09%) !important;
+            display: block;
+            position: absolute;
+            right: 0;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+        }
+
+        .cross-top {
+            top: 0;
+        }
+
+        .cross-middle {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+        .cross-bottom {
+            bottom: 0;
+            width: 100%;
+        }
+    }
+
+    .cross-btn.h-active span.cross-top {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    .cross-btn.h-active span.cross-middle {
+        -webkit-transform: translateX(-30px);
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    .cross-btn.h-active span.cross-bottom {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        bottom: 50%;
+        margin-bottom: -1px;
+    }
+}

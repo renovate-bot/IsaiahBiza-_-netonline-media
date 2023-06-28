@@ -1,0 +1,244 @@
+/*===========================
+     06.PARTNER CSS 
+===========================*/
+
+
+.newsletter {
+    background-image: url(../../../public/images/subscribe-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+    padding: 188px 0;
+
+    @media #{$laptop} {
+        padding: 188px 30px;
+    }
+
+    @media #{$xs} {
+        padding: 80px 10px;
+    }
+}
+
+.newsletter:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(256.31deg, #480000 0.87%, #000000 88.66%);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.subscribes {
+    max-width: 590px;
+    margin: 0 auto;
+    text-align: center;
+
+    span {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #D90A2C;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 65px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E4E4E4;
+        margin-bottom: 20px;
+        line-height: 1;
+
+        @media #{$xs} {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        @media #{$sm} {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px #ffffff;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+
+        @media #{$xs} {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media #{$sm} {
+            font-size: 50px;
+        }
+    }
+}
+
+.subscribe-form {
+    position: relative;
+
+    @media #{$xs} {
+        padding: 0px 10px;
+    }
+}
+
+.subscribe-form form input {
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 48px;
+    border: none;
+    color: #4F4F4F;
+    font-size: 14px;
+
+    @media #{$xs} {
+        height: 50px;
+    }
+
+    @media #{$sm} {
+        height: 60px;
+    }
+}
+
+.subscribe-form form input[type="submit"] {
+    position: absolute;
+    right: 5px;
+    height: 60px;
+    top: 5px;
+    width: 150px;
+    border-radius: 48px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    background-color: $theme-color;
+    @include transition(.5s);
+
+    @media #{$xs} {
+        width: 130px;
+        font-size: 14px;
+        right: 15px;
+        height: 40px;
+    }
+
+    @media #{$sm} {
+        height: 50px;
+    }
+
+    &:hover {
+        color: #17161A;
+        border: 2px solid #D90A2C;
+        background: transparent;
+        box-shadow: 0 0 20px (#D90A2C 1.05%, #730000 100%);
+    }
+}
+
+.subscribe-form form input[type="email"] {
+    padding: 0 160px 0 30px;
+
+    @media #{$xs} {
+        padding: 0 140px 0 20px;
+    }
+}
+
+.our-clients {
+    background-color: #111111;
+    padding: 135px 30px 55px;
+
+    @media #{$desktop} {
+        padding: 119px 30px 55px;
+    }
+
+    @media #{$laptop} {
+        padding: 165px 30px 55px;
+    }
+
+    .title {
+        margin-top: -75px;
+    }
+}
+
+.single-client {
+    position: relative;
+    background-color: #111111;
+    border: 1px solid #191A1C;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 10px rgba(6, 6, 6, 0.15);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    line-height: 45px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+    @media #{$laptop} {
+        padding: 20px 10px;
+    }
+
+    @media #{$xs} {
+        margin-bottom: 30px;
+    }
+
+    img {
+        max-height: 30px;
+    }
+
+    .client-hover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 10px;
+        background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+        visibility: hidden;
+        opacity: 0;
+        @include transform(translateY(-50px));
+        @include transition(.5s);
+
+        span {
+            font-weight: 300;
+            font-size: 16px;
+            text-align: center;
+            color: #E4E4E4;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 10px;
+            justify-content: center;
+            word-break: break-word;
+            line-height: 20px;
+        }
+    }
+
+    &:hover .client-hover {
+        visibility: visible;
+        opacity: 1;
+        @include transform(translateY(0px));
+    }
+
+    &:hover img {
+        visibility: hidden;
+    }
+}

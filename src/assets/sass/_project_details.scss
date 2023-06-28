@@ -1,0 +1,252 @@
+/*===========================
+     17.PROJECT DETAILS PAGE CSS 
+===========================*/
+.project-details-area {
+
+    @media #{$xs} {
+        margin: 80px 0;
+    }
+
+}
+
+.project-process {
+    margin-bottom: 120px;
+}
+
+.process-step {
+    text-align: left;
+
+    @media #{$xs} {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: capitalize;
+        color: #111111;
+        margin-bottom: 5px;
+
+        @media #{$xs} {
+            font-size: 17px;
+        }
+
+
+        @media #{$md} {
+            font-size: 20px;
+        }
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 16px;
+        color: #6A696C;
+        @media #{$xs} {
+            font-size: 14px;
+        }
+        @media #{$md} {
+            font-size: 16px;
+        }
+        @media #{$lg} {
+            font-size: 16px;
+        }
+    }
+}
+
+.process-banner {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @media #{$xs} {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+}
+
+.project-overview {
+    margin-bottom: 60px;
+
+    @media #{$xs} {
+        .or1 {
+            order: 1
+        }
+
+        .or2 {
+            order: 2
+        }
+
+        .or3 {
+            order: 3
+        }
+
+        .or4 {
+            order: 4
+        }
+
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 30px;
+        color: #2E2D31;
+        margin-bottom: 10px;
+
+        @media #{$xs} {
+            text-align: center;
+        }
+
+    }
+
+    &.right h3 {
+        text-align: right;
+
+        @media #{$xs} {
+            text-align: center;
+        }
+    }
+}
+
+.overview-img {
+
+    @media #{$xs} {
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.overview-content {
+    h2 {
+        font-weight: bold;
+        font-size: 30px;
+        letter-spacing: 0.03em;
+        color: #2E2D31;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #272727;
+        margin: 0;
+    }
+
+}
+
+.project-single-step {
+
+    @media #{$xs} {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #111111;
+        display: block;
+        padding: 10px;
+        @include transition(.5s);
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        color: #272727;
+        margin: 0;
+        border: 1px solid #eee;
+        padding: 20px;
+        text-align: left;
+    }
+
+    &:hover b {
+        color: #FFFFFF;
+        background: $theme-color;
+    }
+
+    &:hover .project-step-img {
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.project-step-img {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        @include transition(.5s);
+    }
+}
+
+.releted-project {
+    h3 {
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #2E2D31;
+        margin-bottom: -40px;
+
+        @media #{$xs} {
+            text-align: center;
+        }
+    }
+}
+
+.swiper.releted-project-slider {
+    padding-top: 110px;
+
+    @media #{$xs} {
+        padding-top: 80px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 40px !important;
+        width: 40px !important;
+        background-color: #2A2A2A;
+        border-radius: 50%;
+        color: #fff !important;
+        top: 22px;
+        right: 0% !important;
+        @include transition(.5s);
+
+        &:hover {
+            background-color: $theme-color;
+        }
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 14px !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: auto;
+        right: 5% !important;
+
+        @media #{$md} {
+            right: 10% !important;
+        }
+    }
+}

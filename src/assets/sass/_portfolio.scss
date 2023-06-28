@@ -1,0 +1,234 @@
+/*===========================
+     01.PORTFOLIO CSS 
+===========================*/
+.portfolio-area {
+    @media #{$xs} {
+        margin: 80px 0;
+    }
+
+    .title {
+        margin-bottom: -80px;
+
+        h2 {
+            margin: 0;
+        }
+    }
+}
+
+.swiper.portfolio-slider {
+    padding: 140px 0 50px 0;
+    .swiper-wrapper{
+        padding-bottom: 50px;margin-bottom: -50px;
+}
+
+    .swiper-pagination {
+        bottom: 0 !important;
+    }
+
+    .swiper-pagination-bullet {
+        height: 15px;
+        width: 15px;
+        border: 1px solid $theme-color;
+        box-sizing: border-box;
+        background: transparent;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        position: relative;
+        height: 15px;
+        width: 15px;
+        border: 1px solid $theme-color;
+        box-sizing: border-box;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 5px;
+            width: 5px;
+            background-color: $theme-color;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 40px !important;
+        width: 40px !important;
+        background-color: #2A2A2A;
+        border-radius: 50%;
+        color: #fff !important;
+        top: 22px;
+        right: 5% !important;
+        @include transition(.5s);
+
+        @media #{$xs} {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $theme-color;
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 14px !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: auto;
+        right: 9% !important;
+
+        @media #{$desktop} {
+            right: 9% !important;
+        }
+
+        @media #{$lg} {
+            right: 10% !important;
+        }
+
+        @media #{$md} {
+            right: 12% !important;
+        }
+    }
+
+}
+
+.single-portfolio {
+    position: relative;
+    overflow: hidden;
+
+    .portfolio-data {
+        position: relative;
+        z-index: 1;
+        border-radius: 10px;
+
+        a {
+            img {
+                border-radius: 10px;
+                width: 100%;
+                max-height: 500px;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            background-image: url(../../../public/images/portfolio-hover-bg.png);
+            background-size: cover;
+            background-position: top bottom;
+            border-radius: 10px;
+            visibility: hidden;
+            opacity: 0;
+            @include transition(.5s);
+            @include transform(translateY(-50px));
+        }
+    }
+
+    .portfolio-inner {
+        position: absolute;
+        z-index: 2;
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+        background-color: #0F0F11;
+        border-radius: 5px;
+        padding: 20px;
+
+        span {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: #E4E4E4;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 22px;
+            text-transform: capitalize;
+            color: #E4E4E4;
+            margin: 0;
+
+            @media #{$lg} {
+                font-size: 18px;
+            }
+
+            @media #{$md} {
+                font-size: 18px;
+            }
+        }
+
+        .portfolio-hover {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            @include transition(.5s);
+            @include transform(translateY(-20px));
+
+            a.case-btn {
+                display: inline-block;
+                border: 1px solid #D90A2C;
+                box-sizing: border-box;
+                border-radius: 30px;
+                padding: 5px 15px;
+                font-weight: 500;
+                font-size: 12px;
+                text-transform: capitalize;
+                color: #FFFFFF;
+            }
+
+            i {
+                width: 30px;
+                height: 30px;
+                border: 1px solid #FFFFFF;
+                box-sizing: border-box;
+                border-radius: 50%;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &:hover .portfolio-data:before {
+        visibility: visible;
+        opacity: 1;
+        @include transform(translateY(0px));
+    }
+
+    &:hover .portfolio-inner .portfolio-hover {
+        @include transform(translateY(0px));
+        visibility: visible;
+        opacity: 1;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    &:hover .portfolio-inner {
+        background: #0F0F11;
+        backdrop-filter: blur(42px);
+        border-radius: 10px;
+    }
+
+}

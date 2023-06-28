@@ -1,0 +1,329 @@
+/*===========================
+     13.ABOUT PAGE CSS 
+===========================*/
+.out-story {
+
+    margin-bottom: 120px;
+    @media #{$lg} {
+        margin-bottom: 120px;
+    }
+
+    @media #{$md} {
+        margin-bottom: 120px;
+    }
+}
+
+.story-left {}
+
+.office-group-img {
+    position: relative;
+}
+
+.office-group-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.office-group-img:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: #111111;
+    opacity: 0.4;
+    border-radius: 10px;
+}
+
+.cto-message-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 370px;
+    margin-left: auto;
+    right: inherit;
+}
+
+.cto-message {
+    background: #FFFFFF;
+    box-shadow: 0px 40px 80px rgba(23, 42, 65, 0.06);
+    padding: 25px 20px;
+    text-align: left;
+    border-radius: 0px 20px 0px 5px;
+}
+
+.cto-message h4 {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #111111;
+}
+
+.cto-message p {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #272727;
+}
+
+.cto-message img {
+    margin: 0 auto;
+    display: block;
+    width: auto;
+}
+
+.cto-message h4 span {
+    font-weight: normal;
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #111111;
+    opacity: 0.5;
+}
+.about-left{
+    p{
+        font-weight: normal;
+        font-size: 16px;
+        color: #272727;
+        margin-bottom: 30px;
+    }
+}
+.story-right {
+
+    .title.black {
+        h2 {
+
+            @media #{$laptop} {
+                font-size: 48px;
+            }
+
+            @media #{$lg} {
+                font-size: 40px;
+            }
+        }
+    }
+
+    @media #{$xs} {
+        margin: 80px 0 50px 0;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        color: #272727;
+        margin-bottom: 30px;
+
+        @media #{$laptop,$lg} {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.story-skills {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media #{$xs} {
+        display: block;
+        justify-content: normal;
+        width: auto;
+        text-align: center;
+    }
+}
+
+.story-skill > span {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 20px;
+    display: block;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media #{$laptop} {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    @media #{$lg} {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    @media #{$xs} {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+.story-skill {
+    position: relative;
+
+    @media #{$xs} {
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .progress-bar-circle {
+        position: relative;
+        height: 170px;
+        width: 170px;
+        min-width: 180px;
+        background-color: transparent;
+
+        @media #{$laptop} {
+            height: 140px;
+            width: 140px;
+            min-width: 150px;
+        }
+
+        @media #{$lg} {
+            height: 120px;
+            width: 120px;
+            min-width: 130px;
+        }
+
+        @media #{$xs} {
+            height: 110px;
+            width: 110px;
+            min-width: 120px;
+        }
+    }
+
+    .progress-bar-circle div {
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+
+        @media #{$laptop} {
+            height: 140px;
+            width: 140px;
+        }
+
+        @media #{$lg} {
+            height: 120px;
+            width: 120px;
+        }
+
+        @media #{$xs} {
+            height: 110px;
+            width: 110px;
+        }
+    }
+
+    .progress-bar-circle div span {
+        color: #18191D;
+        position: absolute;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 166px;
+        height: 166px;
+        width: 166px;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        border-radius: 50%;
+        background-color: white;
+        transform: translate(-50%, -50%);
+
+        @media #{$laptop} {
+            height: 136px;
+            width: 136px;
+        }
+
+        @media #{$lg} {
+            height: 116px;
+            width: 116px;
+        }
+
+        @media #{$xs} {
+            height: 106px;
+            width: 106px;
+        }
+
+        b {
+            position: absolute;
+            left: 50%;
+            top: -40px;
+            transform: translateX(-50%);
+            font-weight: 600;
+
+            @media #{$laptop,$lg} {
+                top: -44px;
+                font-size: 22px;
+            }
+
+            @media #{$xs} {
+                top: -44px;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .progress-bar-circle .background {
+        background-color: #000 !important;
+    }
+
+    .progress-bar-circle .rotate {
+        clip: rect(0 85px 170px 0);
+        background-color: #D6D6D6 !important;
+
+        @media #{$laptop} {
+            clip: rect(0 70px 140px 0);
+        }
+
+        @media #{$lg} {
+            clip: rect(0 60px 120px 0);
+        }
+
+        @media #{$xs} {
+            clip: rect(0 55px 110px 0);
+        }
+    }
+
+    .progress-bar-circle .left {
+        clip: rect(0 85px 170px 0);
+        opacity: 1;
+        background-color: #D6D6D6 !important;
+
+        @media #{$laptop} {
+            clip: rect(0 70px 140px 0);
+        }
+
+        @media #{$lg} {
+            clip: rect(0 60px 120px 0);
+        }
+
+        @media #{$xs} {
+            clip: rect(0 55px 110px 0);
+        }
+    }
+
+    .progress-bar-circle .right {
+        clip: rect(0 85px 170px 0);
+        transform: rotate(180deg);
+        opacity: 0;
+        background-color: #D6D6D6 !important;
+
+        @media #{$laptop} {
+            clip: rect(0 70px 140px 0);
+        }
+
+        @media #{$lg} {
+            clip: rect(0 60px 120px 0);
+        }
+
+        @media #{$xs} {
+            clip: rect(0 55px 110px 0);
+        }
+    }
+
+}

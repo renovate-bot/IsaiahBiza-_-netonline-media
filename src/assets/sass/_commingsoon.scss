@@ -1,0 +1,217 @@
+/*===========================
+     21.COMMING SOON CSS 
+===========================*/
+.comming-soon {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #18191D;
+    overflow: hidden;
+    height: 100vh;
+    @media #{$xs} {
+        height: auto;
+    }
+}
+
+.comming-soon-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 120px;
+    min-width: 50%;
+
+    @media #{$desktop,$laptop,$lg} {
+        padding: 0px 40px;
+    }
+
+    @media #{$md,$xs} {
+        min-width: 100%;
+        padding: 0px 40px;
+    }
+
+    @media #{$xs} {
+        padding: 30px;
+    }
+
+}
+
+.cngs-content {
+
+    h1 {
+        font-weight: bold;
+        font-size: 50px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1.5px #fff;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin: 0;
+    }
+}
+
+//Countdown timer css
+#timer {
+    margin: 50px 0;
+
+    @media #{$lg} {
+        margin: 30px 0;
+    }
+
+    @media #{$xs} {
+        margin: 30px 0;
+        text-align: center;
+    }
+}
+
+#timer div {
+    display: inline-block;
+    min-width: 80px;
+    margin: 15px;
+
+    @media #{$lg} {
+        margin: 10px;
+        min-width: auto;
+    }
+
+}
+
+#timer .countdate p {
+    font-size: 60px;
+    line-height: 60px;
+    opacity: 0.3;
+    font-weight: 700;
+    -webkit-text-stroke: 1.5px #fff;
+    -webkit-text-fill-color: transparent;
+
+    @media #{$lg} {
+        font-size: 30px;
+    }
+}
+
+#timer .countdate span {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media #{$lg} {
+        font-size: 20px;
+    }
+}
+
+
+.subscribe-mail {
+    @media #{$xs} {
+        text-align: center;
+    }
+
+    form {
+
+        input {
+            background: #26272B;
+            border-radius: 5px;
+            height: 60px;
+            min-width: 350px;
+            padding: 0 10px;
+            color: #fff;
+            border: none;
+
+            @media #{$lg} {
+                min-width: 280px;
+            }
+
+            @media #{$xs} {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            &[type="submit"] {
+                background-color: #595959;
+                border-radius: 5px;
+                min-width: 170px;
+                padding: 10px 20px;
+                margin-left: 10px;
+                @include transition(.5s);
+
+                @media #{$desktop,$laptop} {
+                    min-width: 150px;
+                }
+
+                @media #{$lg} {
+                    min-width: 120px;
+                }
+
+
+
+                &:hover {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.social-icons {
+    list-style: none;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media #{$md} {
+        right: 15px;
+    }
+
+    @media #{$xs} {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    li {
+        display: block;
+
+        @media #{$xs} {
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        a {
+            display: inline-block;
+            background: #111111;
+            border-radius: 10px;
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+            margin: 10px 0;
+            @include transition(.5s);
+
+            &:hover {
+                background: #D90A2C;
+            }
+        }
+
+    }
+
+}
+
+.comming-soon-right {
+    min-width: 50%;
+    background-color: #fff;
+
+    @media #{$md,$xs} {
+        display: none;
+    }
+}
